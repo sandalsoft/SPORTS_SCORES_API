@@ -22,7 +22,9 @@ const main = async () => {
   );
 
   const { leagues, season, week, events } = data;
-  const filteredGames = filterScheduled(events);
+
+  const filteredGames = filterAllGames(events);
+  // const filteredGames = filterScheduled(events);
   // const filteredGames = filterInProgress(events);
   // const filteredGames = filterFinal(events);
 
@@ -53,26 +55,26 @@ const makeHeaders = games => {
 const getHeaderWidth = key =>
   R.cond([
     [R.equals(`Weather`), R.always(40)],
+    [R.equals(`Predicted Score`), R.always(40)],
     [R.equals(`O/U`), R.always(8)],
     [R.T, R.always(20)]
   ])(key);
 
-const ScheduleType = {
+const StatusType = {
   STATUS_SCHEDULED: `STATUS_SCHEDULED`,
   STATUS_IN_PROGRESS: `STATUS_IN_PROGRESS`,
   STATUS_FINAL: `STATUS_FINAL`
 };
 
+const filterAllGames = R.filter(R.T);
 const filterScheduled = R.filter(
-  R.pathEq(gameStatusPath, ScheduleType.STATUS_SCHEDULED)
+  R.pathEq(gameStatusPath, StatusType.STATUS_SCHEDULED)
 );
 
 const filterInProgress = R.filter(
-  R.pathEq(gameStatusPath, ScheduleType.STATUS_IN_PROGRESS)
+  R.pathEq(gameStatusPath, StatusType.STATUS_IN_PROGRESS)
 );
-const filterFinal = R.filter(
-  R.pathEq(gameStatusPath, ScheduleType.STATUS_FINAL)
-);
+const filterFinal = R.filter(R.pathEq(gameStatusPath, StatusType.STATUS_FINAL));
 
 const convertHalfFraction = R.replace(`.5`, `½`);
 const removeDecimal = R.replace(`.0`, ``);
@@ -133,19 +135,59 @@ const getWeather = event =>
         event
       )}${F}`;
 
-const predictScore = (lineStr, ouStr) => {
-  const ou = parseInt(ouStr);
-  const line = parseInt(lineStr);
+const determineUnderdogTeam = event => {
+  const lineStr = getLine(event);
+  const favoredTeam = lineStr.split(` -`)[0];
 
-  const halfScore = ou / 2;
-  const halfSpread = line / 2;
-  const winningScore = halfScore + halfSpread;
-  const losingScore = halfScore - halfSpread;
-  return {
-    winningScore,
-    losingScore
-  };
+  const visitingTeam = pluckVisitingTeamFromEvent(event);
+  const homeTeam = pluckHomeTeamFromEvent(event);
+  const underdogTeam = homeTeam === favoredTeam ? visitingTeam : homeTeam;
+  return underdogTeam;
 };
+
+const predictScore = event => {
+  try {
+    if (pluckStatusType(event) !== StatusType.STATUS_SCHEDULED) {
+      return na;
+    }
+    const ouStr = getOU(event);
+    const fullLineStr = getLine(event);
+    const ou = parseInt(ouStr);
+    // const line = parseInt(fullLineStr);
+
+    const [favoredTeam, lineStr] = fullLineStr.split(` -`);
+    const line = parseFloat(lineStr.replace(`½`, `.5`));
+    const underdogTeam = determineUnderdogTeam(event);
+    const halfScore = ou / 2;
+    const halfSpread = line / 2;
+    const winningScore = Math.round(halfScore + halfSpread);
+    const losingScore = Math.round(halfScore - halfSpread);
+    const scorePrediction = `${favoredTeam} ${winningScore}-${losingScore} ${underdogTeam}`;
+    return scorePrediction;
+  } catch (error) {
+    return `n/a`;
+  }
+};
+const pluckVisitingTeamFromEvent = R.path([
+  `competitions`,
+  0,
+  `competitors`,
+  1,
+  `team`,
+  `abbreviation`
+]);
+
+const pluckHomeTeamFromEvent = R.path([
+  `competitions`,
+  0,
+  `competitors`,
+  0,
+  `team`,
+  `abbreviation`
+]);
+
+const pluckStatusDescription = R.pathOr(na, [`status`, `type`, `description`]);
+const pluckStatusType = R.pathOr(na, [`status`, `type`, `name`]);
 
 const assembleGame = event => {
   const date = dateFormat(new Date(R.pathOr(na, [`date`], event)), "longTime");
@@ -153,11 +195,13 @@ const assembleGame = event => {
     Date: date,
     Name: R.pathOr(na, [`shortName`], event),
     Line: getLine(event),
+    [`Predicted Score`]: predictScore(event),
     [`O/U`]: getOU(event),
-    Status: R.pathOr(na, [`status`, `type`, `description`], event),
+    Status: pluckStatusDescription(event),
     Weather: getWeather(event)
   };
   // console.log(`game: ${JSON.stringify(game)}`);
   return game;
 };
+
 const assemblGameMap = R.map(assembleGame);
