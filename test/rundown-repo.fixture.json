@@ -1,0 +1,20 @@
+{
+  "testInput": "input",
+  "testExpected": {
+    "expected": "result"
+    },
+  "testTable": [
+    [
+      "input",
+      {
+        "expected": "result"
+      }
+    ],
+    [
+      "input2",
+      {
+        "expected2": "result2"
+      }
+    ]
+  ]
+}

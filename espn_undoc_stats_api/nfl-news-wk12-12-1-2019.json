@@ -1,0 +1,682 @@
+{
+  "header": "NFL News",
+  "link": {
+    "language": "en",
+    "rel": ["index", "desktop", "league"],
+    "href": "http://www.espn.com/nfl/",
+    "text": "All NFL News",
+    "shortText": "All News",
+    "isExternal": false,
+    "isPremium": false
+  },
+  "articles": [
+    {
+      "images": [
+        {
+          "name": "Lambeau Field [800x320]",
+          "width": 800,
+          "caption": "Lambeau Field was one of the stadiums where Jacob Barnor visited to break the world record.",
+          "id": 28189328,
+          "credit": "Photo by Quinn Harris/Getty Images",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2019/1129/r634909_800x320_5-2.jpg",
+          "height": 320
+        },
+        {
+          "name": "Filing-cabinet pizza & hot tubs highlight a World Record trip",
+          "width": 576,
+          "caption": "Jacob Barnor talks through the most interesting tailgate snacks he came across on during his World Record trip.",
+          "url": "https://a.espncdn.com/media/motion/2019/1129/dm_191129_INET_NFL_Interview_Filing_cabinet_pizza_hot_tubs_more_tailgating_quirks_20191129_GLOBAL/dm_191129_INET_NFL_Interview_Filing_cabinet_pizza_hot_tubs_more_tailgating_quirks_20191129_GLOBAL.jpg",
+          "height": 324
+        }
+      ],
+      "description": "British fan Jacob Barnor broke the world record of attending matches at every NFL Stadium in the quickest time.",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/28189373"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/28189373"
+          }
+        },
+        "web": {
+          "href": "http://www.espn.co.uk/nfl/story/_/id/28189373/british-fan-breaks-world-record-attending-nfl-stadiums",
+          "short": { "href": "https://es.pn/2ryLGGd" }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/wireless/story?storyId=28189373"
+        }
+      },
+      "categories": [
+        {
+          "id": 9572,
+          "description": "NFL",
+          "type": "league",
+          "sportId": 28,
+          "leagueId": 28,
+          "league": {
+            "id": 28,
+            "description": "NFL",
+            "links": {
+              "api": { "leagues": {} },
+              "web": { "leagues": { "href": "http://www.espn.com/nfl/" } },
+              "mobile": { "leagues": { "href": "http://m.espn.com/nfl/" } }
+            }
+          },
+          "uid": "s:20~l:28",
+          "createDate": "2019-11-29T19:58:00Z"
+        },
+        {
+          "type": "guid",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "createDate": "2019-11-29T19:58:00Z"
+        }
+      ],
+      "headline": "British fan breaks world record for attending NFL stadiums"
+    },
+    {
+      "images": [
+        {
+          "name": "Lamar Jackson [800x320]",
+          "width": 800,
+          "alt": "Lamar Jackson",
+          "id": 28164789,
+          "credit": "Jayne Kamin-Oncea/Getty Images",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2019/1126/r633304_800x320_5-2.jpg",
+          "height": 320
+        },
+        {
+          "name": "NFL Chiefs vs. Patriots Illustration [608x342]",
+          "width": 608,
+          "alt": "Patrick Mahomes and Tom Brady",
+          "caption": "",
+          "id": 24944071,
+          "credit": "ESPN.com Illustration",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2018/1009/KC_NE_waterillo_16_9_NEW_608x342.jpg",
+          "height": 342
+        },
+        {
+          "name": "Buffalo Bills vs. Cleveland Browns (Baker Mayfield ) [608x342]",
+          "width": 608,
+          "alt": "Buffalo Bills vs. Cleveland Browns (Baker Mayfield )",
+          "id": 28053025,
+          "credit": "Jason Miller/Getty Images",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2019/1110/r626168_608x342_16-9.jpg",
+          "height": 342
+        },
+        {
+          "name": "Orlovsky: I don't know if anyone can stop Lamar Jackson",
+          "width": 576,
+          "caption": "Dan Orlovsky and Marcus Spears believe the dominance of Lamar Jackson and the Ravens is too much even for the red-hot 49ers.",
+          "url": "https://a.espncdn.com/media/motion/2019/1127/dm_191127_NFL_LIVE_9ERS_V_RAVENS_REV1/dm_191127_NFL_LIVE_9ERS_V_RAVENS_REV1.jpg",
+          "height": 324
+        }
+      ],
+      "description": "Play-off places at stake, jobs on the line. The NFL's December schedule throws up a host of compelling match ups to look out for as the end of the regular season looms.",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/28182033"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/28182033"
+          }
+        },
+        "web": {
+          "href": "http://www.espn.co.uk/nfl/story/_/id/28182033/the-five-nfl-games-watch-december",
+          "short": { "href": "https://es.pn/2rBTuHq" }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/wireless/story?storyId=28182033"
+        }
+      },
+      "categories": [
+        {
+          "id": 9572,
+          "description": "NFL",
+          "type": "league",
+          "sportId": 28,
+          "leagueId": 28,
+          "league": {
+            "id": 28,
+            "description": "NFL",
+            "links": {
+              "api": { "leagues": {} },
+              "web": { "leagues": { "href": "http://www.espn.com/nfl/" } },
+              "mobile": { "leagues": { "href": "http://m.espn.com/nfl/" } }
+            }
+          },
+          "uid": "s:20~l:28",
+          "createDate": "2019-11-28T12:56:00Z"
+        },
+        {
+          "type": "guid",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "createDate": "2019-11-28T12:56:00Z"
+        }
+      ],
+      "headline": "The five NFL games you must watch in December"
+    },
+    {
+      "images": [
+        {
+          "name": "Jones' offseason workouts a big reason for his success",
+          "width": 576,
+          "alt": "",
+          "caption": "Packers running back Aaron Jones reflects on how offseason workouts with high school QBs in El Paso, Texas, helped propel him to a breakout season.",
+          "url": "https://a.espncdn.com/media/motion/2019/1201/dm_191201_nfl_aaronjonesfeature/dm_191201_nfl_aaronjonesfeature.jpg",
+          "height": 324
+        }
+      ],
+      "description": "Packers running back Aaron Jones reflects on how offseason workouts with high school QBs in El Paso, Texas, helped propel him to a breakout season.",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/video/clips/28201354"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/video/clips/28201354"
+          }
+        },
+        "web": {
+          "href": "http://www.espn.com/video/clip?id=28201354",
+          "short": { "href": "https://es.pn/2OADxtQ" }
+        }
+      },
+      "categories": [
+        {
+          "id": 9572,
+          "description": "NFL",
+          "type": "league",
+          "sportId": 28,
+          "leagueId": 28,
+          "league": {
+            "id": 28,
+            "description": "NFL",
+            "links": {
+              "api": { "leagues": {} },
+              "web": { "leagues": { "href": "http://www.espn.com/nfl/" } },
+              "mobile": { "leagues": { "href": "http://m.espn.com/nfl/" } }
+            }
+          },
+          "uid": "s:20~l:28",
+          "createDate": "2019-12-01T14:50:06Z"
+        },
+        {
+          "id": 167170,
+          "description": "Aaron Jones",
+          "type": "athlete",
+          "sportId": 28,
+          "athleteId": 3042519,
+          "athlete": {
+            "id": 3042519,
+            "description": "Aaron Jones",
+            "links": {
+              "api": { "athletes": {} },
+              "web": {
+                "athletes": {
+                  "href": "http://www.espn.com/nfl/player/_/id/3042519/aaron-jones"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=3042519"
+                }
+              }
+            }
+          },
+          "uid": "s:20~l:28~a:3042519",
+          "createDate": "2019-12-01T14:50:06Z"
+        },
+        {
+          "id": 1861,
+          "description": "Green Bay Packers",
+          "type": "team",
+          "sportId": 28,
+          "teamId": 9,
+          "team": {
+            "id": 9,
+            "description": "Green Bay Packers",
+            "links": {
+              "api": { "teams": {} },
+              "web": {
+                "teams": {
+                  "href": "http://www.espn.com/nfl/team/_/name/gb/green-bay-packers"
+                }
+              },
+              "mobile": {
+                "teams": { "href": "http://m.espn.com/nfl/clubhouse?teamId=9" }
+              }
+            }
+          },
+          "uid": "s:20~l:28~t:9",
+          "createDate": "2019-12-01T14:50:06Z"
+        },
+        {
+          "id": 12024,
+          "description": "Fantasy NFL",
+          "type": "league",
+          "sportId": 3080,
+          "leagueId": 3080,
+          "league": {
+            "id": 3080,
+            "description": "Fantasy NFL",
+            "links": {
+              "api": { "leagues": {} },
+              "web": { "leagues": {} },
+              "mobile": { "leagues": {} }
+            }
+          },
+          "uid": "s:20~l:3080",
+          "createDate": "2019-12-01T14:50:06Z"
+        },
+        {
+          "type": "guid",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "createDate": "2019-12-01T14:50:06Z"
+        },
+        {
+          "type": "guid",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "createDate": "2019-12-01T14:50:06Z"
+        },
+        {
+          "type": "guid",
+          "guid": "06cd3bcf7a8653d428e7aa049dd36261",
+          "createDate": "2019-12-01T14:50:06Z"
+        },
+        {
+          "type": "guid",
+          "guid": "6d751aaa23723153af9329071487165f",
+          "createDate": "2019-12-01T14:50:06Z"
+        }
+      ],
+      "headline": "Jones' offseason workouts a big reason for his success"
+    },
+    {
+      "images": [
+        {
+          "name": "Ryan tears up discussing Lynn's impact off the field",
+          "width": 576,
+          "alt": "",
+          "caption": "Rex Ryan, Samantha Ponder and Luis Riddick get emotional talking about Anthony Lynn and the impact the Chargers' head coach has made off of the football field.",
+          "url": "https://a.espncdn.com/media/motion/2019/1201/dm_191201_Rex_Ryan_cry_Anthony_Lynn/dm_191201_Rex_Ryan_cry_Anthony_Lynn.jpg",
+          "height": 324
+        }
+      ],
+      "description": "Rex Ryan, Samantha Ponder and Luis Riddick get emotional talking about Anthony Lynn and the impact the Chargers' head coach has made off of the football field.",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/video/clips/28202300"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/video/clips/28202300"
+          }
+        },
+        "web": {
+          "href": "http://www.espn.com/video/clip?id=28202300",
+          "short": { "href": "https://es.pn/34DMbO3" }
+        }
+      },
+      "categories": [
+        {
+          "id": 9572,
+          "description": "NFL",
+          "type": "league",
+          "sportId": 28,
+          "leagueId": 28,
+          "league": {
+            "id": 28,
+            "description": "NFL",
+            "links": {
+              "api": { "leagues": {} },
+              "web": { "leagues": { "href": "http://www.espn.com/nfl/" } },
+              "mobile": { "leagues": { "href": "http://m.espn.com/nfl/" } }
+            }
+          },
+          "uid": "s:20~l:28",
+          "createDate": "2019-12-01T17:17:45Z"
+        },
+        {
+          "id": 2610,
+          "description": "Los Angeles Chargers",
+          "type": "team",
+          "sportId": 28,
+          "teamId": 24,
+          "team": {
+            "id": 24,
+            "description": "Los Angeles Chargers",
+            "links": {
+              "api": { "teams": {} },
+              "web": {
+                "teams": {
+                  "href": "http://www.espn.com/nfl/team/_/name/lac/los-angeles-chargers"
+                }
+              },
+              "mobile": {
+                "teams": { "href": "http://m.espn.com/nfl/clubhouse?teamId=24" }
+              }
+            }
+          },
+          "uid": "s:20~l:28~t:24",
+          "createDate": "2019-12-01T17:17:45Z"
+        },
+        {
+          "type": "guid",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "createDate": "2019-12-01T17:17:45Z"
+        },
+        {
+          "type": "guid",
+          "guid": "84caf62bc75371eaa78744fd224a4294",
+          "createDate": "2019-12-01T17:17:45Z"
+        }
+      ],
+      "headline": "Ryan tears up discussing Lynn's impact off the field"
+    },
+    {
+      "images": [
+        {
+          "name": "Jackson has been exceeding expectations since high school",
+          "width": 576,
+          "alt": "",
+          "caption": "Tom Rinaldi chronicles Lamar Jackson's path to NFL superstardom, including a \"wow factor\" that has been a common phenomenon since high school.",
+          "url": "https://a.espncdn.com/media/motion/2019/1201/dm_191201_nfl_legend_of_lamar731/dm_191201_nfl_legend_of_lamar731.jpg",
+          "height": 324
+        }
+      ],
+      "description": "Tom Rinaldi chronicles Lamar Jackson's path to NFL superstardom, including a \"wow factor\" that has been a common phenomenon since high school.",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/video/clips/28201287"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/video/clips/28201287"
+          }
+        },
+        "web": {
+          "href": "http://www.espn.com/video/clip?id=28201287",
+          "short": { "href": "https://es.pn/2qTsPpy" }
+        }
+      },
+      "categories": [
+        {
+          "id": 9572,
+          "description": "NFL",
+          "type": "league",
+          "sportId": 28,
+          "leagueId": 28,
+          "league": {
+            "id": 28,
+            "description": "NFL",
+            "links": {
+              "api": { "leagues": {} },
+              "web": { "leagues": { "href": "http://www.espn.com/nfl/" } },
+              "mobile": { "leagues": { "href": "http://m.espn.com/nfl/" } }
+            }
+          },
+          "uid": "s:20~l:28",
+          "createDate": "2019-12-01T14:34:13Z"
+        },
+        {
+          "id": 184545,
+          "description": "Lamar Jackson",
+          "type": "athlete",
+          "sportId": 28,
+          "athleteId": 3916387,
+          "athlete": {
+            "id": 3916387,
+            "description": "Lamar Jackson",
+            "links": {
+              "api": { "athletes": {} },
+              "web": {
+                "athletes": {
+                  "href": "http://www.espn.com/nfl/player/_/id/3916387/lamar-jackson"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=3916387"
+                }
+              }
+            }
+          },
+          "uid": "s:20~l:28~a:3916387",
+          "createDate": "2019-12-01T14:34:13Z"
+        },
+        {
+          "id": 2830,
+          "description": "Baltimore Ravens",
+          "type": "team",
+          "sportId": 28,
+          "teamId": 33,
+          "team": {
+            "id": 33,
+            "description": "Baltimore Ravens",
+            "links": {
+              "api": { "teams": {} },
+              "web": {
+                "teams": {
+                  "href": "http://www.espn.com/nfl/team/_/name/bal/baltimore-ravens"
+                }
+              },
+              "mobile": {
+                "teams": { "href": "http://m.espn.com/nfl/clubhouse?teamId=33" }
+              }
+            }
+          },
+          "uid": "s:20~l:28~t:33",
+          "createDate": "2019-12-01T14:34:13Z"
+        },
+        {
+          "type": "guid",
+          "guid": "382484553da484e4809098b5cc38ffdc",
+          "createDate": "2019-12-01T14:34:13Z"
+        },
+        {
+          "type": "guid",
+          "guid": "7d76fbb11c5ed9f4954fcad43f720ae2",
+          "createDate": "2019-12-01T14:34:13Z"
+        },
+        {
+          "type": "guid",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "createDate": "2019-12-01T14:34:13Z"
+        }
+      ],
+      "headline": "Jackson has been exceeding expectations since high school"
+    },
+    {
+      "images": [
+        {
+          "name": "Vikings vs. Seahawks (-3)",
+          "width": 576,
+          "alt": "",
+          "caption": "Monday Night Football pits Kirk Cousins against Russell Wilson, and the two quarterbacks have much different track records against the point spread in primetime games.",
+          "url": "https://a.espncdn.com/media/motion/2019/1201/dm_191201_Vikings_Seahawks_Daily_Wager/dm_191201_Vikings_Seahawks_Daily_Wager.jpg",
+          "height": 324
+        }
+      ],
+      "description": "Monday Night Football pits Kirk Cousins against Russell Wilson, and the two quarterbacks have much different track records against the point spread in primetime games.",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/video/clips/28201956"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/video/clips/28201956"
+          }
+        },
+        "web": {
+          "href": "http://www.espn.com/video/clip?id=28201956",
+          "short": { "href": "https://es.pn/2P1RnEF" }
+        }
+      },
+      "categories": [
+        {
+          "id": 9572,
+          "description": "NFL",
+          "type": "league",
+          "sportId": 28,
+          "leagueId": 28,
+          "league": {
+            "id": 28,
+            "description": "NFL",
+            "links": {
+              "api": { "leagues": {} },
+              "web": { "leagues": { "href": "http://www.espn.com/nfl/" } },
+              "mobile": { "leagues": { "href": "http://m.espn.com/nfl/" } }
+            }
+          },
+          "uid": "s:20~l:28",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "id": 103823,
+          "description": "Russell Wilson",
+          "type": "athlete",
+          "sportId": 28,
+          "athleteId": 14881,
+          "athlete": {
+            "id": 14881,
+            "description": "Russell Wilson",
+            "links": {
+              "api": { "athletes": {} },
+              "web": {
+                "athletes": {
+                  "href": "http://www.espn.com/nfl/player/_/id/14881/russell-wilson"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=14881"
+                }
+              }
+            }
+          },
+          "uid": "s:20~l:28~a:14881",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "id": 1693,
+          "description": "Seattle Seahawks",
+          "type": "team",
+          "sportId": 28,
+          "teamId": 26,
+          "team": {
+            "id": 26,
+            "description": "Seattle Seahawks",
+            "links": {
+              "api": { "teams": {} },
+              "web": {
+                "teams": {
+                  "href": "http://www.espn.com/nfl/team/_/name/sea/seattle-seahawks"
+                }
+              },
+              "mobile": {
+                "teams": { "href": "http://m.espn.com/nfl/clubhouse?teamId=26" }
+              }
+            }
+          },
+          "uid": "s:20~l:28~t:26",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "id": 103992,
+          "description": "Kirk Cousins",
+          "type": "athlete",
+          "sportId": 28,
+          "athleteId": 14880,
+          "athlete": {
+            "id": 14880,
+            "description": "Kirk Cousins",
+            "links": {
+              "api": { "athletes": {} },
+              "web": {
+                "athletes": {
+                  "href": "http://www.espn.com/nfl/player/_/id/14880/kirk-cousins"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=14880"
+                }
+              }
+            }
+          },
+          "uid": "s:20~l:28~a:14880",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "id": 1920,
+          "description": "Minnesota Vikings",
+          "type": "team",
+          "sportId": 28,
+          "teamId": 16,
+          "team": {
+            "id": 16,
+            "description": "Minnesota Vikings",
+            "links": {
+              "api": { "teams": {} },
+              "web": {
+                "teams": {
+                  "href": "http://www.espn.com/nfl/team/_/name/min/minnesota-vikings"
+                }
+              },
+              "mobile": {
+                "teams": { "href": "http://m.espn.com/nfl/clubhouse?teamId=16" }
+              }
+            }
+          },
+          "uid": "s:20~l:28~t:16",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "id": 137817,
+          "description": "news - chalk",
+          "type": "topic",
+          "sportId": 0,
+          "topicId": 179,
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "type": "guid",
+          "guid": "3767a23ca17d294f288a9086ad1f0680",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "type": "guid",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "type": "guid",
+          "guid": "3db556c9ed76a7a54ccba92fc6db4334",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "type": "guid",
+          "guid": "53bec012c2edbc7ca8d5438611f9faa1",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "type": "guid",
+          "guid": "f0610946ceb69a993bcccf110b2078b5",
+          "createDate": "2019-12-01T16:26:16Z"
+        },
+        {
+          "type": "guid",
+          "guid": "14f579db79eca89894058fec63e16063",
+          "createDate": "2019-12-01T16:26:16Z"
+        }
+      ],
+      "headline": "Vikings vs. Seahawks (-3)"
+    }
+  ]
+}
