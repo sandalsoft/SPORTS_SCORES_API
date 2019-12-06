@@ -76,7 +76,7 @@ module.exports = {
       color: "white",
       align: "center",
       paddingLeft: 2,
-      width: 24,
+      width: 28,
       formatter
     },
     {
