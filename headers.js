@@ -12,6 +12,7 @@ const inProgressCellFormat = cellValue => chalk.yellow(cellValue);
 const inFutureCellFormat = cellValue => chalk.white(cellValue);
 
 const formatter = (cellValue, columnIndex, rowIndex, rowData, inputData) => {
+  // return R.includes(`http://`, cellValue) &&  cellValue
   const row = inputData[rowIndex];
   var inProgressRegex = / Q\d /g;
   var matchedRegex = cellValue.match(inProgressRegex);
@@ -21,6 +22,10 @@ const formatter = (cellValue, columnIndex, rowIndex, rowData, inputData) => {
   if (row.Status.includes(` F`)) {
     return pastCellFormat(cellValue);
   }
+  if (row.URL.includes(`http://`)) {
+    // return `cellValue`;
+  }
+
   return inFutureCellFormat(cellValue);
 };
 module.exports = {
@@ -40,7 +45,16 @@ module.exports = {
       color: "white",
       align: "center",
       paddingLeft: 2,
-      width: 24,
+      width: 20,
+      formatter
+    },
+    {
+      value: "Event",
+      headerColor: "cyan",
+      color: "white",
+      align: "center",
+      paddingLeft: 2,
+      width: 10,
       formatter
     },
     {
@@ -86,6 +100,15 @@ module.exports = {
       align: "center",
       paddingLeft: 2,
       width: 38,
+      formatter
+    },
+    {
+      value: "URL",
+      headerColor: "cyan",
+      color: "white",
+      align: "center",
+      paddingLeft: 2,
+      width: 12,
       formatter
     }
   ]
