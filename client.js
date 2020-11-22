@@ -150,11 +150,11 @@ const getOUValue = event =>
 
 const output = (header, rows, footer) => {
   let t1 = Table(header, rows, footer, {
-    borderStyle: 1,
+    borderStyle: '1',
     borderColor: "blue",
-    paddingBottom: 0,
-    headerAlign: "center",
-    align: "center",
+    // paddingBottom: `0`,
+    // headerAlign: "center",
+    // align: "center",
     color: "white",
     truncate: "..."
   });
@@ -180,15 +180,15 @@ const getWeatherDisplay = event =>
 const getWeather = event =>
   isNFLEvent(event)
     ? `${R.pathOr(na, weatherDisplayValuePath, event)} ${R.pathOr(
-        na,
-        nflTempPath,
-        event
-      )}${F}`
+      na,
+      nflTempPath,
+      event
+    )}${F}`
     : `${R.pathOr(na, weatherDisplayValuePath, event)} ${R.pathOr(
-        na,
-        ncaaTempPath,
-        event
-      )}${F}`;
+      na,
+      ncaaTempPath,
+      event
+    )}${F}`;
 
 const calcUnderdogTeam = event => {
   const lineStr = getLine(event);
