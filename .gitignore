@@ -77,3 +77,4 @@ dist/*
 
 # npm cost-of-modules can create node_modules_bak so let's not commit that shall we?
 node_modules_bak
+node_modules/*
