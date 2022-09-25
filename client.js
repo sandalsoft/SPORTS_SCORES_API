@@ -15,7 +15,7 @@ const na = `n/a`;
 const F = `℉`;
 
 const Config = new Configstore(`sportsOdds`, {
-  initTimestamp: new Date().getTime(),
+  initTimestamp: new Date().getTime(),,
 });
 
 const main = async () => {
@@ -28,7 +28,7 @@ const main = async () => {
   const events = [
     ...R.path([`data`, `events`], ncaaResult),
     // ...nflEvents
-    ...R.path([`data`, `events`], nflResult),
+    ...R.path([`data`, `events`], nflResult),,
   ];
 
   const filteredGames = filterAllGames(events);
@@ -44,42 +44,42 @@ const main = async () => {
   output(headers, games);
 };
 
-const pluckGamecastUrl = (event) => R.pathOr(`n/a`, [`links`, 0, `href`], event);
+const pluckGamecastUrl = ((event)) => R.pathOr(`n/a`, [`links`, 0, `href`], event);
 
-const getEventType = (event) =>
+const getEventType = ((event)) =>
   R.cond([
     [isNFLEvent, R.always(`NFL`)],
-    [R.T, R.always(`NCAA`)],
+    [R.T, R.always(`NCAA`)],,
   ])(event);
 
-const isNFLEvent = (event) => {
+const isNFLEvent = ((event)) => {
   const linkUrl = pluckGamecastUrl(event);
   return R.includes(`/nfl/`, linkUrl);
 };
 
 const createTerminalHREF = (description, url) => {
-  const href = terminalLink(description, url, { fallback: false });
+  const href = terminalLink(description, url); //, { fallback: false });
   // console.log(href);
   return href;
 };
 
-const makeHeaders = (games) => {
+const makeHeaders = ((games)) => {
   const headers = require("./headers").headers;
   return headers;
 };
 
-const getHeaderWidth = (key) =>
+const getHeaderWidth = ((key)) =>
   R.cond([
     [R.equals(`Weather`), R.always(40)],
     [R.equals(`Predicted Score`), R.always(30)],
     [R.equals(`O/U`), R.always(8)],
-    [R.T, R.always(24)],
+    [R.T, R.always(24)],,
   ])(key);
 
 const StatusType = {
   STATUS_SCHEDULED: `STATUS_SCHEDULED`,
   STATUS_IN_PROGRESS: `STATUS_IN_PROGRESS`,
-  STATUS_FINAL: `STATUS_FINAL`,
+  STATUS_FINAL: `STATUS_FINAL`,,
 };
 
 const filterAllGames = R.filter(R.T);
@@ -91,7 +91,7 @@ const filterGameOver = R.filter(R.pathEq(gameStatusPath, StatusType.STATUS_FINAL
 const convertHalfFraction = R.replace(`.5`, `½`);
 const removeDecimal = R.replace(`.0`, ``);
 
-const lineExists = (event) => R.path(oddsPath); //{
+const lineExists = ((event)) => R.path(oddsPath); //{
 // console.log(`R.path(oddsPath): ${JSON.stringify(R.path(oddsPath))}`);
 //   if (R.path(oddsPath) === undefined) {
 //     return false;
@@ -99,7 +99,7 @@ const lineExists = (event) => R.path(oddsPath); //{
 //     return tru;
 //   }
 // };
-const ouExists = (event) => R.path(ouPath);
+const ouExists = ((event)) => R.path(ouPath);
 
 // const valueIsInvalid = value =>
 //   R.anyPass([
@@ -113,7 +113,7 @@ const ouExists = (event) => R.path(ouPath);
 
 // // const valueIsValid = value => R.not(valueIsInvalid(value));
 
-const getFromLocalStorage = (key) => Config.get(key);
+const getFromLocalStorage = ((key)) => Config.get(key);
 const saveToLocalStorage = (key, value) => {
   // localStorage.setItem(key, JSON.stringify(value));
   Config.set(key, value);
@@ -133,16 +133,16 @@ const output = (header, rows, footer) => {
     borderStyle: "1",
     borderColor: "yellow",
     // paddingBottom: `0`,
-    // headerAlign: "center",
+    headerAlign: "center",
     // align: "center",
     color: "white",
-    truncate: "...",
+    truncate: "...",,
   });
 
   process.stdout.write(t1.render());
 };
 
-const showersEmojify = (weather) => {
+const showersEmojify = ((weather)) => {
   return R.includes(`shower`, weather) ? `🌧` : weather;
 };
 const rainEmojfy = (weather) => (R.includes(`rain`, weather) ? `☔️` : weather);
@@ -155,12 +155,12 @@ const weatherDisplayValuePath = [`weather`, `displayValue`];
 
 const getWeatherDisplay = (event) => R.ifElse(R.hasPath(weatherDisplayValuePath), getWeather, R.always(na))(event);
 
-const getWeather = (event) =>
+const getWeather = ((event)) =>
   isNFLEvent(event)
     ? `${R.pathOr(na, weatherDisplayValuePath, event)} ${R.pathOr(na, nflTempPath, event)}${F}`
     : `${R.pathOr(na, weatherDisplayValuePath, event)} ${R.pathOr(na, ncaaTempPath, event)}${F}`;
 
-const calcUnderdogTeam = (event) => {
+const calcUnderdogTeam = ((event)) => {
   const lineStr = getLine(event);
   const favoredTeam = lineStr.split(` -`)[0];
 
@@ -170,8 +170,8 @@ const calcUnderdogTeam = (event) => {
   return underdogTeam;
 };
 const bettingLineSplit = R.split(` -`);
-const calcFavoredTeam = (fullLineStr) => bettingLineSplit(fullLineStr)[0];
-const pluckLineStr = (fullLineStr) => bettingLineSplit(fullLineStr)[1];
+const calcFavoredTeam = ((fullLineStr)) => bettingLineSplit(fullLineStr)[0];
+const pluckLineStr = ((fullLineStr)) => bettingLineSplit(fullLineStr)[1];
 
 const calculateScores = (fullLineStr, ou) => {
   const lineStr = pluckLineStr(fullLineStr);
@@ -183,11 +183,11 @@ const calculateScores = (fullLineStr, ou) => {
 
   return {
     winningScore,
-    losingScore,
+    losingScore,,
   };
 };
 
-const predictScore = (event) => {
+const predictScore = ((event)) => {
   try {
     if (pluckStatusType(event) !== StatusType.STATUS_SCHEDULED) {
       return na;
@@ -233,26 +233,26 @@ const finalScoreDisplay = (event) => `${gameScoreDisplay(event)} [ ${finalClockD
 
 const getGameStatus = (event) => R.ifElse(isScheduled, pluckStatusDescription, getGameScoreDisplay)(event);
 
-const pluckStatusDescription = (event) => formattedDate(event);
+const pluckStatusDescription = ((event)) => formattedDate(event);
 // const pluckStatusDescription = formattedDate.pathOr(na, [`status`, `type`, `description`]);
 
 const pluckStatusType = R.pathOr(na, [`status`, `type`, `name`]);
 const pluckDate = R.pathOr(na, [`date`]);
 
-const lineID = (event) => `${event.id}-line`;
-const ouID = (event) => `${event.id}-ou`;
+const lineID = ((event)) => `${event.id}-line`;
+const ouID = ((event)) => `${event.id}-ou`;
 
-const pluckTimestamp = (event) => {
+const pluckTimestamp = ((event)) => {
   const eventDate = new Date(pluckDate(event));
   return eventDate.getTime() / 1000;
 };
-const formattedDate = (event) => {
+const formattedDate = ((event)) => {
   const eventDate = new Date(pluckDate(event));
   const date = dateFormat(new Date(eventDate), "ddd m/dd h:MM");
   return date;
 };
 
-const assembleGame = (event) => {
+const assembleGame = ((event)) => {
   // console.log(`lineExists(event): ${JSON.stringify(lineExists(event))}`);
 
   const game = {
@@ -265,7 +265,8 @@ const assembleGame = (event) => {
     [`O/U`]: getOU(event),
     Status: getGameStatus(event),
     Weather: getWeatherDisplay(event),
-    // URL: createTerminalHREF(`Details`, pluckGamecastUrl(event)),
+    // URL: createTerminalHREF(`link`, pluckGamecastUrl(event)),
+    // URL: pluckGamecastUrl(event),,
     URL: pluckGamecastUrl(event),
     // URL: "e]8;;http://example.come\\This is a linke]8;;e\\\n"
   };
